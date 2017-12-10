@@ -22,6 +22,68 @@ class TestKotlin {
     lateinit internal var user: User
     lateinit var sa: String
 
+
+
+//    public Fragment getItem(int position) {
+//        Fragment fragment = null;
+//
+//        switch (position) {
+//            case 0:
+//            fragment = new FirstFragment();
+//            break;
+//            case 1:
+//            fragment = new SecondFragment();
+//            break;
+//            case 2:
+//            fragment = new ThirdFragment();
+//            break;
+//            default:
+//            break;
+//        }
+//        return fragment;
+//    }
+fun getItem(position: Int): Fragment? {
+    var fragment: Fragment? = null
+
+    when (position) {
+        0 -> fragment = FirstFragment()
+        1 -> fragment = SecondFragment()
+        2 -> fragment = ThirdFragment()
+        else -> {
+        }
+    }
+    return fragment
+}
+
+    // when式が結果を返すので、そのまま関数にしてもいいかも
+    fun getItem2(position: Int): Fragment? =
+        when (position) {
+            0 -> fragment = FirstFragment()
+            1 -> fragment = SecondFragment()
+            2 -> fragment = ThirdFragment()
+            else -> {
+            }
+        }
+
+//    private String methodB(boolean bool) {
+//        String s;
+//        if(b) {
+//            s = "a";
+//        } else {
+//            s = "b";
+//        }
+//        return s;
+//    }
+    private fun methodB(bool: Boolean): String {
+        val s: String
+        if (b) {
+            s = "a"
+        } else {
+            s = "b"
+        }
+        return s
+    }
+
 }
 
 /*

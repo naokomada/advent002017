@@ -4,11 +4,19 @@
 
 public class TestJava {
     private int methodA(int a, int b) {
-        String nullstr = null;
-
-        return 0;
+        boolean bool = true;
+        String s;
+        if(b) {
+            s = "a";
+        } else {
+            s = "b";
+        }
     }
+
+
 }
+
+
 
 public class PublicClass {
     private String a = "abc";
@@ -27,3 +35,6 @@ class MyUser {
         this.age = age;
     }
 }
+
+
+
